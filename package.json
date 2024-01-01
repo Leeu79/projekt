@@ -1,0 +1,20 @@
+{
+  "name": "wellapro",
+  "version": "1.0.0",
+  "description": "automaticTest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "npx cypress open"
+  },
+  "keywords": [
+    "wellapro",
+    "cypress",
+    "auomaticTest"
+  ],
+  "author": "leeu.dk",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.1"
+  }
+}
