@@ -8,20 +8,11 @@ class PageCountry {
         this.countryListItem.then(($locations) => {
             const countrySelector = $locations.toArray().map(location => location.href);
             countrySelector.forEach((href) => {
-              cy.request({
-                url: href,
-                failOnStatusCode: false,
-              }).then((response) => {
-                if (response.status === 200) {
-                  cy.log(`Strona dostępna na podstawie atrybutu href ${href}`);
-                } else {
-                  cy.log('error');
-                }
-            })
-        })
-    })
-  }
-}
-  
+                cy.visit(href);
+                })
+              })
+            }
+        }
+
 
 export default new PageCountry ();
