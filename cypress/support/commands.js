@@ -7,6 +7,12 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
+import 'cypress-iframe';
+
+Cypress.Commands.add('acceptOneTrust', () => {
+cy.get("#onetrust-accept-btn-handler").click()
+});
+
 Cypress.Commands.add('handleUncaughtException', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
       // Check if the error message contains the expected string
